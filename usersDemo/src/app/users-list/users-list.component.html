@@ -1,0 +1,38 @@
+<header>
+    DBS User Portal
+</header>
+<div class="container mainContainer">
+    <div class="row">
+        <div class="">
+            <button class="btnNewUser pull-right" (click)="openUserForm('','A')"><i class="fa fa-plus"></i>New User</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 text-center" *ngFor="let user of usersList">
+            <div class="userCard">
+                <div class='delete-icon gryTxt' (click)="openUserForm(user,'D')">x</div>
+                <div><i class="fa fa-user-circle fa-5x"> </i></div>
+                <div class="editText gryTxt" (click)="openUserForm(user,'U')">edit</div>
+                <div class="detailsRow">
+                    <span class="labelTxt gryTxt">Name: </span>
+                    <span class="userDtltxt">{{user.name}}</span>
+                </div>
+                <div class="detailsRow">
+                    <span class="labelTxt gryTxt">Email: </span>
+                    <span class="userDtltxt">{{user.email}}</span>
+                </div>
+                <div class="detailsRow">
+                    <span class="labelTxt gryTxt">Phone: </span>
+                    <span class="userDtltxt">{{user.phone}}</span>
+                </div>
+                <div class="detailsRow">
+                    <span class="labelTxt gryTxt">Website: </span>
+                    <span class="userDtltxt">{{user.website}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <app-user-form user=[user]></app-user-form> -->

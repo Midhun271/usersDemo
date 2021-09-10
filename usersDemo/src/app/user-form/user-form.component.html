@@ -1,0 +1,66 @@
+<h1 mat-dialog-title>{{formHeader}}</h1>
+<div mat-dialog-content>
+    <div class="row">
+        <div class="col-lg-12 userForm">
+            <form [formGroup]="userForm">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6">
+                        <div class="form-group">
+                            <label>Name :</label>
+                            <div>
+                                <input type="text" formControlName="name" placeholder="Enter Name"/>
+                            </div>
+                            <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)" class="error-feedback">
+                                <div *ngIf="f.name.errors.required">Name is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <div class="form-group">
+                            <label>Email :</label>
+                            <div>
+                                <input type="text" formControlName="email" placeholder="Enter Email"/>
+                            </div>
+                            <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)" class="error-feedback">
+                                <div *ngIf="f.email.errors.required">Email is required</div>
+                                <div *ngIf="f.email.errors.pattern">Invalid email</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-lg-6">
+                        <div class="form-group">
+                            <label>Phone Number :</label>
+                            <div>
+                                <input type="text" formControlName="phone" placeholder="Enter Phone Number"/>
+                            </div>
+                            <div *ngIf="f.phone.invalid && (f.phone.dirty || f.phone.touched)" class="error-feedback">
+                                <div *ngIf="f.phone.errors.required">Phone Number is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-6">
+                        <div class="form-group">
+                            <label>Website :</label>
+                            <div>
+                                <input type="text" formControlName="website" placeholder="Enter Website"/>
+                            </div>
+                            <div *ngIf="f.website.invalid && (f.website.dirty || f.website.touched)" class="error-feedback">
+                                <div *ngIf="f.website.errors.pattern">Invalid website</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions class="popupBtns">
+    <div>
+        <button mat-button mat-dialog-close class="btn-primary" (click)="addUpadteUser()" [disabled]="!userForm.valid">{{btnText}}</button>
+    </div>
+    <div>
+        <button mat-button mat-dialog-close>Cancel</button>
+    </div>
+</div>

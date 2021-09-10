@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Delete User</h1>
+<div mat-dialog-content>Do you want to delete {{selectedUser.name}}?</div>
+<div mat-dialog-actions class="popupBtns">
+    <div>
+        <button mat-button mat-dialog-close (click)="deleteUser()" class="btn-primary">Yes</button>
+    </div>
+    <div>
+        <button mat-button mat-dialog-close>No</button>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+.userCard{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+}
+
+.gryTxt{
+    color: #808080;
+}
+.delete-icon{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    cursor: pointer;
+}
+.editText{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.detailsRow span{
+    display: inline-block;
+}
+.labelTxt{
+    text-align: right;
+    padding-right: 10px;
+    width: 35%;
+    vertical-align: top;
+}
+.userDtltxt{
+    text-align: left;
+    width: 65%;
+    word-wrap: break-word;
+}
+.btnNewUser{
+    padding: 5px 10px;
+    margin: 0 1%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: auto;
+    font-weight: 600;
+    color: #053c6d;
+    text-align: center;
+    border: 1px solid #053c6d;
+}
+.btnNewUser i{
+    padding-right: 10px;
+}
